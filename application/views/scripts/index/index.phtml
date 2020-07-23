@@ -1,0 +1,127 @@
+<style scoped>
+    .currentjob a{
+        /*	display:block;*/
+    }
+</style>
+<?php
+$this->headScript()->appendScript('');
+?>
+<body data-demo-id="chart" data-library="dom">
+    <div id="main">
+
+        <div class="demo chart-demo" id="chart-demo">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <table class="tblAlche table table-bordered" style="text-align: center;">
+                <tr>
+                    <td colspan="16" class="clsLvl1" nxtCls1="clsLvl2_1" nxtCls2="clsLvl2_2" nextClass="clsLvl2_1">
+                        <input type="text" class="input-medium element"/>
+                        <input type="button" class="getIt btn btn-info" value="Get it"/>
+                        <input type="text" class="input-medium forproduct"/>
+                    </td>
+                </tr>
+                <tr class="lvl2">
+                    <td colspan="8" class="clsLvl2_1" nxtCls1="clsLvl3_1" nxtCls2="clsLvl3_2" nextClass="clsLvl2_2"></td>
+
+                    <td colspan="8" class="clsLvl2_2" nxtCls1="clsLvl3_3" nxtCls2="clsLvl3_4" nextClass="clsLvl3_1"></td>
+                </tr>
+                <tr class="lvl3">
+                    <td colspan="4" class="clsLvl3_1" nxtCls1="clsLvl4_1" nxtCls2="clsLvl4_2" nextClass="clsLvl3_2"></td>
+                    <td colspan="4" class="clsLvl3_2" nxtCls1="clsLvl4_3" nxtCls2="clsLvl4_4" nextClass="clsLvl3_3"></td>
+
+                    <td colspan="4" class="clsLvl3_3" nxtCls1="clsLvl4_5" nxtCls2="clsLvl4_6" nextClass="clsLvl3_4"></td>
+                    <td colspan="4" class="clsLvl3_4" nxtCls1="clsLvl4_7" nxtCls2="clsLvl4_8" nextClass="clsLvl4_1"></td>
+                </tr>
+                <tr  class="lvl4">
+                    <td colspan="2" class="clsLvl4_1" nxtCls1="clsLvl5_1" nxtCls2="clsLvl5_2" nextClass="clsLvl4_2"></td>
+                    <td colspan="2" class="clsLvl4_2" nxtCls1="clsLvl5_3" nxtCls2="clsLvl5_4" nextClass="clsLvl4_3"></td>
+                    <td colspan="2" class="clsLvl4_3" nxtCls1="clsLvl5_5" nxtCls2="clsLvl5_6" nextClass="clsLvl4_4"></td>
+                    <td colspan="2" class="clsLvl4_4" nxtCls1="clsLvl5_7" nxtCls2="clsLvl5_8" nextClass="clsLvl4_5"></td>
+
+                    <td colspan="2" class="clsLvl4_5" nxtCls1="clsLvl5_9" nxtCls2="clsLvl5_10" nextClass="clsLvl4_6"></td>
+                    <td colspan="2" class="clsLvl4_6" nxtCls1="clsLvl5_11" nxtCls2="clsLvl5_12" nextClass="clsLvl4_7"></td>
+                    <td colspan="2" class="clsLvl4_7" nxtCls1="clsLvl5_13" nxtCls2="clsLvl5_14" nextClass="clsLvl4_8"></td>
+                    <td colspan="2" class="clsLvl4_8" nxtCls1="clsLvl5_15" nxtCls2="clsLvl5_16" nextClass=""></td>
+                </tr>
+                <tr class="lvl5">
+                    <td class="clsLvl5_1"></td>
+                    <td class="clsLvl5_2"></td>
+                    <td class="clsLvl5_3"></td>
+                    <td class="clsLvl5_4"></td>
+                    <td class="clsLvl5_5"></td>
+                    <td class="clsLvl5_6"></td>
+                    <td class="clsLvl5_7"></td>
+                    <td class="clsLvl5_8"></td>
+
+                    <td class="clsLvl5_9"></td>
+                    <td class="clsLvl5_10"></td>
+                    <td class="clsLvl5_11"></td>
+                    <td class="clsLvl5_12"></td>
+                    <td class="clsLvl5_13"></td>
+                    <td class="clsLvl5_14"></td>
+                    <td class="clsLvl5_15"></td>
+                    <td class="clsLvl5_16"></td>
+                </tr>
+            </table>
+
+            <div>
+                <input type="button" class="pickThem btn btn-info" value="pick them"/>
+                <input type="button" class="getOtherRec btn btn-info" value="get Other Rec"/>
+                <input type="button" onclick="checkPuzzle()" class="btn btn-info" value="Check"/>
+                <input type="button" onclick="genPuzzle()" class="btn btn-info" value="GEN"/>
+            </div>
+            
+            <input type="button" onclick="$('#divReac').show();$('#divReacSelective').hide();" class="btn btn-info" value="Reac"/>
+            <input type="button" onclick="$('#divReacSelective').show();$('#divReac').hide();" class="btn btn-info" value="ReacSelective"/>
+            <input type="button" onclick="$('#divReacSelective').show();$('#divReac').show();" class="btn btn-info" value="Both"/>
+            
+            <div id="divReac">
+                <div style="height: 300px; width: 50%; overflow: scroll; float: left;">
+                    <table class="tblReactions table table-bordered">
+                        <thead>
+                        <th>select</th>
+                        <th>elem1</th>
+                        <th>elem2</th>
+                        <th>product</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div style="height: 300px; width: 50%; overflow: scroll">
+                    <table class="tblOtherReactions table table-bordered">
+                        <thead>
+                        <th>select</th>
+                        <th>elem1</th>
+                        <th>elem2</th>
+                        <th>product</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="divReacSelective">
+                <table class="tblReacSelective table table-bordered">
+                    <thead>
+                    <th>delete</th>
+                    <th>elem1</th>
+                    <th>elem2</th>
+                    <th>product</th>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="clsPzl" class="clsPzl"></div>
+        </div>
+
+    </div>
+</body>

@@ -1,0 +1,99 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="<?= $this->baseUrl("admin") ?>">
+            <i class="icon-white icon-home" style="position:relative; top:5px;"></i>
+            SEDD Foreman
+        </a>
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse">
+
+
+                <ul class="nav">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">crew <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crew/listall') ?>">all crew</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crew/idle') ?>">idle crew</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crew/idle') ?>">assigned crew</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crew/add') ?>">new crew</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">crew members<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crewmembers/listall') ?>">all crew members</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crewmembers/idle') ?>">idle crew members</a>
+                            </li>
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crewmembers/idle') ?>">assigned crew members</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/crewmembers/add') ?>">new crew member</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">equipment<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="<?= $this->baseUrl('/admin/equipment/listall') ?>">all equipment</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <ul class="nav pull-right">
+                    <li class="active">
+                        <a href="<?= $this->baseUrl('/admin/crew/listall') ?>">foreman</a>
+                    </li>
+
+                    <li>
+                        <a href="<?= $this->baseUrl('/') ?>">dashboard</a>
+                    </li>
+
+                    <li class="divider-vertical"></li>
+
+
+
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <?php //$this->escape($this->currentUser()->getName()) ?>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?= $this->baseUrl('users/logout') ?>">logout</a></li>
+                            <!-- <li><a href="#">messages</a></li> -->
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

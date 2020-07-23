@@ -1,0 +1,8 @@
+<?php if (count($this->triggers) > 0): ?>
+    <div class="scrutinytrigg">
+        <h6>Notifications</h6>
+        <?php foreach ($this->triggers as $trigger): ?>
+            <?= $this->partial('partials/scrutinytrigger.phtml', array('trigger' => $trigger)) ?>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

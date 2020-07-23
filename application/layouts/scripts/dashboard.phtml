@@ -1,0 +1,100 @@
+<?php
+$contsants = $this->getConstants();
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/ico"/>
+        <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"/>
+        <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE"/>
+        <?php echo $this->headTitle(); ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="<?= $this->baseUrl('/css/bootstrap.min.css') ?>" />
+        <link rel="stylesheet" href="<?= $this->baseUrl('/css/dashboard.css') ?>?v=<?=$contsants->key->jsversion?>" />
+        <link rel="stylesheet" href="<?= $this->baseUrl('/js/datepicker/css/redmond/jquery-ui-1.10.1.custom.min.css') ?>" />
+        <?php echo $this->headLink(); ?>
+
+
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <?= $this->render('partials/dashnav.phtml'); ?>
+
+
+        <div class="container">
+            <div class="span12" id="sdd_headercontainer">
+
+                <?php echo $this->render("partials/header.phtml"); ?>
+
+            </div>
+        </div>
+
+        <div class="container-fluid" id="sdd_content">
+
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </body>
+
+    <script src="<?= $this->baseUrl('/js/jquery.js') ?>"></script>
+    <script src="<?= $this->baseUrl('/js/datepicker/js/jquery-ui-1.10.1.custom.min.js') ?>"></script>
+    <script src="<?= $this->baseUrl('/js/bootstrap.min.js') ?>"></script>
+    <script src="<?= $this->baseUrl('/js/sdd_main.js') ?>"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $( "#filterTxt" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                changeYear: true,			
+                numberOfMonths: 1,
+                dateFormat:'mm/dd/yy',
+                maxDate: '+0d'
+            });
+        }); 
+        function redirect(flag){
+            if(!flag)
+                $("#filterTxt").val('');
+            $("#formRigFilter").submit();
+                    
+            //var date = $("#filterTxt").val();
+            //date = str_replace("/","-",date);
+            //window.location = "http://indrasedrilling.com/index/index/fltdate/"+date;
+        }
+        function str_replace (search, replace, subject, count) {
+            var i = 0,
+            j = 0,
+            temp = '',
+            repl = '',
+            sl = 0,
+            fl = 0,
+            f = [].concat(search),
+            r = [].concat(replace),
+            s = subject,
+            ra = Object.prototype.toString.call(r) === '[object Array]',
+            sa = Object.prototype.toString.call(s) === '[object Array]';
+            s = [].concat(s);
+            if (count) {
+                this.window[count] = 0;
+            }
+ 
+            for (i = 0, sl = s.length; i < sl; i++) {
+                if (s[i] === '') {
+                    continue;
+                }
+                for (j = 0, fl = f.length; j < fl; j++) {
+                    temp = s[i] + '';
+                    repl = ra ? (r[j] !== undefined ? r[j] : '') : r[0];
+                    s[i] = (temp).split(f[j]).join(repl);
+                    if (count && s[i] !== temp) {
+                        this.window[count] += (temp.length - s[i].length) / f[j].length;
+                    }
+                }
+            }
+            return sa ? s : s[0];
+        }
+    </script>
+    <?php echo $this->headScript(); ?>
+</html>

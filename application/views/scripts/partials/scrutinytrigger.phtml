@@ -1,0 +1,101 @@
+<?php $trigger = $this->trigger;
+
+if(!$trigger) return;
+
+switch($trigger->category){
+    case 'time':
+        $icon_class = "icon-time";
+        break;
+
+    case 'cost':
+        $icon_class = "icon-user";
+        break;
+
+    case 'milestone':
+        $icon_class="icon-flag";
+        break;
+
+
+        
+    case 'production':
+        $icon_class = ($trigger->label=="Time") ? "icon-time" : "icon-cog";
+        break;
+
+    case 'administrative':
+        $icon_class = "icon-info-sign";
+        break;
+
+
+    
+    default:
+        $icon_class = ($trigger->slantvector>=0) ? 'icon-ok': 'icon-warning-sign';
+        break;
+    
+}
+
+
+
+switch(true){
+    
+    case ($trigger->slantvector < -3):
+        $button_class = "btn-danger";
+        $icon_class .= " icon-white";
+        break;
+
+    case ($trigger->slantvector > 3):
+        $button_class = "btn-success";
+        $icon_class .= " icon-white";
+        break;
+
+    case (abs($trigger->slantvector) < 3):
+        $button_class = "btn-default";
+        //$icon_class = "icon-info-sign";
+        break;
+
+    case ($trigger->slantvector < 0):
+        $button_class = "btn-inverse";
+        $icon_class .= " icon-white";
+        break;
+	
+    case ($trigger->slantvector>0):
+        $button_class = "btn-default";
+        // $icon_class .= " icon-white";
+        break;
+
+// 
+// 
+// 
+// 
+    // case (abs($trigger->slantvector) < 2):
+        // $button_class = "btn-default";
+        // //$icon_class = "icon-info-sign";
+        // break;
+// 
+// 
+    // case ( $trigger->slantvector < -2):
+        // $button_class = "btn-warning";
+        // $icon_class .= " icon-white";
+        // break;
+// 
+    // case ($trigger->slantvector > 2):
+        // $button_class = "btn-info";
+        // //$icon_class = "icon-info-sign";
+        // break;
+// 
+
+
+    default:
+        $button_class ="btn-info";
+        //$icon_class = "icon-info-sign";
+
+}
+
+
+?>
+
+
+
+<span rel="tooltip" title="<?=$this->escape(ucwords($trigger->category))?>: <?=$this->escape($trigger->label)?>" data-content="<?=$this->escape($trigger->description)?>" class="btn slantvector<?=$trigger->slantvector?> <?=$button_class?>">
+    <i class="<?=$icon_class?>"></i>
+    <!--<?=$this->escape($trigger->label)?>-->
+</span>

@@ -1,0 +1,69 @@
+/** ELEMENTS **/
+.chart-demo .window { 
+    border:0.1em dotted #d4e06b; 	
+    width:14em; height:4em; 	
+    line-height:4em;
+    padding: 2px;
+}
+
+/** HOVER EFFECTS **/
+.chart-demo .window:hover, .chart-demo .window._jsPlumb_source_hover, .chart-demo .window._jsPlumb_target_hover {
+    border:1px solid orange;
+    color:orange;
+}
+
+.btn-blue {
+    background-color: hsl(202, 54%, 39%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#56a1cc", endColorstr="#2d7199");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#56a1cc), to(#2d7199));
+    background-image: -moz-linear-gradient(top, #56a1cc, #2d7199);
+    background-image: -ms-linear-gradient(top, #56a1cc, #2d7199);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #56a1cc), color-stop(100%, #2d7199));
+    background-image: -webkit-linear-gradient(top, #56a1cc, #2d7199);
+    background-image: -o-linear-gradient(top, #56a1cc, #2d7199);
+    background-image: linear-gradient(#56a1cc, #2d7199);
+    border-color: #2d7199 #2d7199 hsl(202, 54%, 34.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.29);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-blue-green {
+    background-color: hsl(177, 54%, 39%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#56ccc6", endColorstr="#2d9993");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#56ccc6), to(#2d9993));
+    background-image: -moz-linear-gradient(top, #56ccc6, #2d9993);
+    background-image: -ms-linear-gradient(top, #56ccc6, #2d9993);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #56ccc6), color-stop(100%, #2d9993));
+    background-image: -webkit-linear-gradient(top, #56ccc6, #2d9993);
+    background-image: -o-linear-gradient(top, #56ccc6, #2d9993);
+    background-image: linear-gradient(#56ccc6, #2d9993);
+    border-color: #2d9993 #2d9993 hsl(177, 54%, 34.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.29);
+    -webkit-font-smoothing: antialiased;
+}
+.tblAlche td{
+    text-align: center;
+}
+.secs{
+    clear: both;
+}
+.apiWordsArea{
+    margin: 0 auto;
+    width: 50%;
+}
+.divParent{
+    float: left;
+    text-align: center;
+}
+.clsApiWord{
+    margin: 4px;
+    padding: 6px;
+}
+.alert-selected{
+    background-color: #222;
+    color: #fff;
+}

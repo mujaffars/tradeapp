@@ -1,0 +1,89 @@
+<table style="border:1px solid black;" class="table table-striped table-bordered">
+    <tbody>
+        <tr>
+            <td>First Name</td>
+            <td>
+                <input type="text" id="firstName" class="clsHours required" maxlength="50" />
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+                <input type="text" id="lastName" class="clsHours required" maxlength="50" />
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Date of birth</td>
+            <td>
+                <input type="text" id="dob" class="clsHours required" maxlength="50" />
+            </td>
+        </tr>
+        <tr>
+            <td>Occupation</td>
+            <td>
+                <input type="text" id="occupation" class="clsHours required" maxlength="50" />
+            </td>
+        </tr>
+        <tr>
+            <td>Native place</td>
+            <td>
+                <input type="text" id="nativePlace" class="clsHours required" maxlength="50" />
+            </td>
+        </tr>
+        <tr>
+            <td>Pet name</td>
+            <td>
+                <input type="text" id="petName" class="clsHours required" maxlength="50" />
+            </td>
+        </tr>
+<!--        <tr>
+            <td>Son of</td>
+            <td>
+                <select id="sonOf">
+                    <?php foreach ($this->personList As $rowPerson) { ?>
+                        <option value="<?php echo $rowPerson['id']; ?>"><?php echo $rowPerson['first_name'] . " " . $rowPerson['last_name']; ?></option>
+                    <?php } ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Daughter of</td>
+            <td>
+                <select id="daughterOf">
+                    <?php foreach ($this->personList As $rowPerson) { ?>
+                        <option value="<?php echo $rowPerson['id']; ?>"><?php echo $rowPerson['first_name'] . " " . $rowPerson['last_name']; ?></option>
+                    <?php } ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Husband of</td>
+            <td>
+                <select id="husbandOf">
+                    <?php foreach ($this->personList As $rowPerson) { ?>
+                        <option value="<?php echo $rowPerson['id']; ?>"><?php echo $rowPerson['first_name'] . " " . $rowPerson['last_name']; ?></option>
+                    <?php } ?>
+                </select>
+            </td>
+        </tr>-->
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="button" class="btn btn-success btnSavePerson" value="Save"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <div class="alert-success clsPAddNotice thumbnail" style="display:none">Person added successfully</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

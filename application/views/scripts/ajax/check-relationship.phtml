@@ -1,0 +1,29 @@
+<table style="border:1px solid black;" class="table table-striped table-bordered">
+    <tbody>
+        <tr>
+            <th>Person 1</th>
+            <th>Relation type</th>
+            <th colspan="2">Person 2</th>
+        </tr>
+        <tr>
+            <?php
+            foreach ($this->relationList As $rowRelation) {
+                foreach ($this->personList As $rowPerson) {
+                    if ($rowPerson['id'] == $rowRelation['person_id_2']) {
+                        ?>
+                    <tr>
+                        <?php
+                        $person2name = $rowPerson['first_name'] . " " . $rowPerson['last_name'];
+                        ?>
+                        <td><?php echo $rowRelation['first_name'] . " " . $rowRelation['last_name']; ?></td>
+                        <td><?php echo $rowRelation['relation_type']; ?></td>
+                        <td><?php echo $person2name; ?></td>
+                        <td><a class="icon icon-remove clsRemoveRelation" relationId="<?php echo $rowRelation['id'];?>" href="javascript:void(0)">X</a></td>
+                    </tr>
+                    <?php
+                }
+            }
+        }
+        ?>
+    </tbody>
+</table>

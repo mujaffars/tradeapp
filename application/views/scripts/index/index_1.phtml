@@ -1,0 +1,100 @@
+<style scoped>
+    .currentjob a{
+        /*	display:block;*/
+    }
+</style>
+<?php
+$this->headScript()->appendScript('
+
+$(function(){ 
+	$(".xhrdo").click(function(){
+		$("#ModalShellBody").empty().load($(this).attr("href"));
+		//$("#ModalShellHeader h3").empty().html("Progress Report");
+
+	})
+
+	$(".details_trigger").click(function(){
+		$("#ModalShellBody").empty().html( $(this).next().html() );
+		//$("#ModalShellHeader h3").empty().html("Report Details");
+
+	})
+        
+        $(".jobImg").load(function(){ 
+            var height = 0;
+            $(".rigsection").each( function(){ 
+            $(this).css("height", "auto").find(".scrutinytriggers").css("position", "relative");
+            height = Math.max(height, $(this).height()) });
+            $(".rigsection").height(height);
+	});
+        
+        $(".rigLabel").each( function(){ 
+           $("#"+this.id).text("Last Report: "+$("#drill"+this.id).text()); 
+        });
+        
+        $(".clsYardAlert").each( function(){ alert(33);
+            if($("#yardAlert"+this.id).text() == "show"){ 
+                $("#"+this.id).show().text("Yard time entered");
+            }
+        });
+        
+        setInterval(function(){
+            $(".clsYardAlert").toggleClass("backgroundYellow");
+         },500)
+})
+'
+);
+?>
+<body data-demo-id="chart" data-library="dom">
+    <div id="main">
+        <input type="button" class="btn btn-success btnAddPerson" value="Add new"/>
+        <input type="button" class="btn btn-success btnMakeRelationship" value="Make relationship"/>
+        <input type="button" class="btn btn-success btnCheckRelationship" value="Check relationship"/>
+
+        <div class="demo chart-demo" id="chart-demo">
+            <?php
+            $arrayRelationship = array();
+
+            foreach ($this->personList As $rowPerson) {
+
+                // Get all relationship records
+                $relationshipRec = Application_Model_Relation::Mapper()->getRelations($rowPerson['id']);
+                ?>
+                <div class="window <?php echo ($rowPerson['gender'] == 'male')?'btn-blue':'btn-blue-green';?>" id="chartWindow<?php echo $rowPerson['id']; ?>" personId="<?php echo $rowPerson['id']; ?>" style="left: <?php echo $rowPerson['left']; ?>px; top: <?php echo $rowPerson['top']; ?>px;">
+                    <div class="thumbnail" style="width:25%; height:76%; float:left; padding:1px; overflow:hidden;">
+                        <?php if ($rowPerson['profile_img'] != '') { ?>
+                            <img src="/img/<?php echo $rowPerson['profile_img']; ?>"/>
+                        <?php } else if ($rowPerson['gender'] == 'female') { ?> 
+                            <img src="/img/blank_female.JPG"/>
+                        <?php } else { ?>
+                            <img src="/img/blank_male.JPG"/>
+                        <?php } ?>
+                    </div>
+                    <div>
+                        <?php echo $rowPerson['first_name'] . " " . $rowPerson['last_name']; ?>
+                    </div>
+                </div>
+                <?php
+                if (count($relationshipRec) > 0) {
+                    $arrayRelationship['user_' . $rowPerson['id']] = array();
+
+                    $pCnt++;
+                    foreach ($relationshipRec As $rowRelation) {
+                        $arrayRelationship['user_' . $rowPerson['id']][] = array(
+                            'type' => $rowRelation['relation_type'],
+                            'personWith' => $rowRelation['person_id_2'],
+                            'selfId' => $rowPerson['id']
+                        );
+                    }
+                }
+            }
+            ?>
+
+
+            <textarea id="txtJsonString" style="display: none">
+                <?php echo json_encode($arrayRelationship); ?>
+            </textarea>
+
+        </div>
+
+    </div>
+</body>

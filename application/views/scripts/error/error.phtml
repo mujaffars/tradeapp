@@ -1,0 +1,51 @@
+<?php $this->headScript()->appendScript("
+
+$(function(){ 
+    $('.clsParentShowHide').click(function(){
+        if($(this).find('a').hasClass('icon-chevron-down')){
+            $(this).find('a').removeClass('icon-chevron-down');
+            $(this).find('a').addClass('icon-chevron-right');
+        }else{
+            $(this).find('a').removeClass('icon-chevron-right');
+            $(this).find('a').addClass('icon-chevron-down');            
+        }
+    })
+});"); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Zend Framework Default Application</title>
+    </head>
+    <body style="text-align: center">
+        <?php if ($this->message != 'Page not found') { ?>
+            <h1>An error occurred</h1>
+            <h2><?php echo $this->message ?></h2>
+        <?php } else { ?>
+            <h2><?php echo "404 " . $this->message ?></h2>
+            <h4 style="font-weight: normal">The requested URL was not found on this server</h4>
+        <?php } ?>    
+        <?php if (isset($this->exception)): ?>
+            <div class="" style="width: 150px; margin: 0 auto; margin-top: 50px;">
+                <span style="font-weight: bold; cursor: pointer;" onclick="$('#developerInfo').toggle()" class="clsParentShowHide">
+                    <a href="javascript:void(0)" class="lnkShowHide updown icon-chevron-right"></a>
+                    More details
+                </span>
+            </div>
+            <div id="developerInfo" style="text-align: left;">
+                <h3>Exception information:</h3>
+                <p>
+                    <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+                </p>
+
+                <h3>Stack trace:</h3>
+                <pre><?php echo $this->exception->getTraceAsString() ?></pre>
+
+                <h3>Request Parameters:</h3>
+                <pre><?php echo $this->escape(var_export($this->request->getParams(), true)) ?>
+                </pre>
+            </div>
+        <?php endif ?>
+
+    </body>
+</html>

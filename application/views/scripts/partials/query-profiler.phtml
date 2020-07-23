@@ -1,0 +1,33 @@
+<?php
+$profiler = $this->profiler;
+$totalTime = $profiler->getTotalElapsedSecs();
+$queryCount = $profiler->getTotalNumQueries();
+$longestTime = 0;
+$longestQuery = null;
+
+foreach ($profiler->getQueryProfiles() as $query) {    
+    if ($query->getElapsedSecs() > $longestTime) {
+        $longestTime = $query->getElapsedSecs();
+        $longestQuery = $query->getQuery();
+    }
+}
+?>
+<div>Executed <?php echo $queryCount; ?> queries in <?php echo $totalTime; ?> seconds</div>
+<div>Average query length: <?php echo $totalTime / $queryCount; ?> seconds</div>
+<div>Queries per second: <?php echo $queryCount / $totalTime; ?></div>
+<div>Longest query length: <?php echo $longestTime; ?></div>
+<div>Longest query: <?php echo $longestQuery; ?></div>
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>detail</th>
+        <th>elapsed sec</th>
+    </tr>
+    <?php
+    foreach ($profiler->getQueryProfiles() as $query) {
+        ?>
+        <tr>
+            <td style="width: 600px;"><?php echo $query->getQuery();?></td>
+            <td><?php echo $query->getElapsedSecs();?></td>
+        </tr>
+    <?php } ?>
+</table>

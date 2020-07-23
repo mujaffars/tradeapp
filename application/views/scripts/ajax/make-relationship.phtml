@@ -1,0 +1,43 @@
+<table style="border:1px solid black;" class="table table-striped table-bordered">
+    <tbody>
+        <tr>
+            <td>Person 1</td>
+            <td>
+                <select id="person_id_1">
+                <?php foreach ($this->personList As $rowPerson) { ?>
+                        <option value="<?php echo $rowPerson['id']; ?>"><?php echo $rowPerson['first_name'] . " " . $rowPerson['last_name']." (ID: ".$rowPerson['id'].")"; ?></option>
+                <?php } ?>
+				</select>
+            </td>
+        </tr>
+        <tr>
+            <td>Relation type</td>
+            <td>
+                <select id="relation_type">
+                        <option value="fatherOf">Father of</option>
+                        <option value="husbandOf">Husband of</option>
+				</select>
+            </td>
+        </tr>
+        <tr>
+            <td>Person 2</td>
+            <td>
+				<select id="person_id_2">
+                <?php foreach ($this->personList As $rowPerson) { ?>
+                        <option value="<?php echo $rowPerson['id']; ?>"><?php echo $rowPerson['first_name'] . " " . $rowPerson['last_name']." (ID: ".$rowPerson['id'].")"; ?></option>
+                <?php } ?>
+				</select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="button" class="btn btn-success btnMakeRelationship" value="Save"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <div class="alert-success clsRAddNotice thumbnail" style="display:none">Relation added successfully</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

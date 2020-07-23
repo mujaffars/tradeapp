@@ -1,0 +1,452 @@
+body{
+    /*background-color:#fafafa;*/
+}
+
+.hero-unit{
+    background:transparent;
+}
+
+
+a.brand i{
+    display:none;
+    visibility:hidden;
+
+}
+
+a.brand:hover i{
+    visibility: visible;
+}
+
+
+.rigsection{
+    background:white;
+    min-height:250px;
+    margin-bottom:3em;
+    position:relative;
+}
+
+
+.rigsection > *{
+    padding:0.5em;
+}
+
+.rigsection > :first-child{
+    padding-top:0;
+}
+
+.scrutinytriggers{
+    position:absolute;
+    bottom:3px;
+    width: 95%;
+}
+
+.scrutinytriggers span.btn{
+    margin-top:0.25em;
+}
+
+
+
+.drilllist li{
+    margin:1em 0;
+}
+
+.navbar-inner{
+    -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;
+}
+
+.drilllist .progress{
+    width:75%;
+}
+
+.main{
+    margin-top:2em;
+    margin-bottom:2em;
+
+}
+
+.sub-header span{
+    margin-right:1em;
+}
+
+.section{
+    margin-bottom:1em;
+    margin-top:1em;
+}
+
+.drillstatus h6 small{
+    margin-left:1em;
+}
+
+.riglist div.progress div.bar{
+    /*color:black !important;*/
+    font-weight:bold;
+
+}
+
+.rigstatuses dt{
+    margin-top:1em;
+    padding:0 0.5em;
+    white-space:nowrap;
+}
+
+.rigstatuses dt:first-child{
+    margin-top:0;
+}
+
+.rigstatuses dt a{
+    display:inline;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    text-decoration:underline;
+}
+
+.rigstatuses dd{
+    padding:0 0.75em;
+}
+
+.errors{
+    color: red;
+}
+
+.error{
+    color: red;
+}
+
+/* Css for dashboard rigsection ''clsDivReports' class */
+/* Code added on 18 June 2014 By Mujaffar Sanadi */
+.clsDivReports {
+    max-height: 80px; overflow-y: auto; overflow-x: hidden; padding: 0px; margin: 0px;
+}
+
+/* Css for colored bootstrap buttons */
+/* Code added on 02 Aug 2013 By Mujaffar Sanadi */
+.btn-alpha {
+    background-color: hsl(193, 32%, 49%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b8d3da", endColorstr="#5493a4");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#b8d3da), to(#5493a4));
+    background-image: -moz-linear-gradient(top, #b8d3da, #5493a4);
+    background-image: -ms-linear-gradient(top, #b8d3da, #5493a4);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b8d3da), color-stop(100%, #5493a4));
+    background-image: -webkit-linear-gradient(top, #b8d3da, #5493a4);
+    background-image: -o-linear-gradient(top, #b8d3da, #5493a4);
+    background-image: linear-gradient(#b8d3da, #5493a4);
+    border-color: #5493a4 #5493a4 hsl(193, 32%, 41.5%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.49);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-juliet {
+    background-color: hsl(41, 85%, 35%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efb73d", endColorstr="#a5750d");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#efb73d), to(#a5750d));
+    background-image: -moz-linear-gradient(top, #efb73d, #a5750d);
+    background-image: -ms-linear-gradient(top, #efb73d, #a5750d);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efb73d), color-stop(100%, #a5750d));
+    background-image: -webkit-linear-gradient(top, #efb73d, #a5750d);
+    background-image: -o-linear-gradient(top, #efb73d, #a5750d);
+    background-image: linear-gradient(#efb73d, #a5750d);
+    border-color: #a5750d #a5750d hsl(41, 85%, 29%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.39);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-lime {
+    background-color: hsl(145, 62%, 68%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdf3dd", endColorstr="#7adfa4");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#cdf3dd), to(#7adfa4));
+    background-image: -moz-linear-gradient(top, #cdf3dd, #7adfa4);
+    background-image: -ms-linear-gradient(top, #cdf3dd, #7adfa4);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cdf3dd), color-stop(100%, #7adfa4));
+    background-image: -webkit-linear-gradient(top, #cdf3dd, #7adfa4);
+    background-image: -o-linear-gradient(top, #cdf3dd, #7adfa4);
+    background-image: linear-gradient(#cdf3dd, #7adfa4);
+    border-color: #7adfa4 #7adfa4 hsl(145, 62%, 63%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-charlie {
+    background-color: hsl(86, 79%, 44%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#daf6b5", endColorstr="#7cc817");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#daf6b5), to(#7cc817));
+    background-image: -moz-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: -ms-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #daf6b5), color-stop(100%, #7cc817));
+    background-image: -webkit-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: -o-linear-gradient(top, #daf6b5, #7cc817);
+    background-image: linear-gradient(#daf6b5, #7cc817);
+    border-color: #7cc817 #7cc817 hsl(86, 79%, 34%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.66);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-india {
+    background-color: hsl(214, 37%, 28%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a99c1", endColorstr="#2c4361");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#7a99c1), to(#2c4361));
+    background-image: -moz-linear-gradient(top, #7a99c1, #2c4361);
+    background-image: -ms-linear-gradient(top, #7a99c1, #2c4361);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7a99c1), color-stop(100%, #2c4361));
+    background-image: -webkit-linear-gradient(top, #7a99c1, #2c4361);
+    background-image: -o-linear-gradient(top, #7a99c1, #2c4361);
+    background-image: linear-gradient(#7a99c1, #2c4361);
+    border-color: #2c4361 #2c4361 hsl(214, 37%, 19.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.56);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-oscar {
+    background-color: hsl(70, 11%, 23%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7b7f66", endColorstr="#3e4134");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#7b7f66), to(#3e4134));
+    background-image: -moz-linear-gradient(top, #7b7f66, #3e4134);
+    background-image: -ms-linear-gradient(top, #7b7f66, #3e4134);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7b7f66), color-stop(100%, #3e4134));
+    background-image: -webkit-linear-gradient(top, #7b7f66, #3e4134);
+    background-image: -o-linear-gradient(top, #7b7f66, #3e4134);
+    background-image: linear-gradient(#7b7f66, #3e4134);
+    border-color: #3e4134 #3e4134 hsl(70, 11%, 17.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.36);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-alert {
+    background-color: hsl(60, 100%, 45%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fefe4c", endColorstr="#e5e500");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#fefe4c), to(#e5e500));
+    background-image: -moz-linear-gradient(top, #fefe4c, #e5e500);
+    background-image: -ms-linear-gradient(top, #fefe4c, #e5e500);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefe4c), color-stop(100%, #e5e500));
+    background-image: -webkit-linear-gradient(top, #fefe4c, #e5e500);
+    background-image: -o-linear-gradient(top, #fefe4c, #e5e500);
+    background-image: linear-gradient(#fefe4c, #e5e500);
+    border-color: #e5e500 #e5e500 hsl(60, 100%, 40%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-faint-pink {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #edb9ef;
+    background-image: -moz-linear-gradient(top, #e9a8eb, #f3d1f5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e9a8eb), to(#f3d1f5));
+    background-image: -webkit-linear-gradient(top, #e9a8eb, #f3d1f5);
+    background-image: -o-linear-gradient(top, #e9a8eb, #f3d1f5);
+    background-image: linear-gradient(to bottom, #e9a8eb, #f3d1f5);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe9a8eb', endColorstr='#fff3d1f5', GradientType=0);
+    border-color: #f3d1f5 #f3d1f5 #e493e6;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #f3d1f5;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-faint-brown {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #f4ac78;
+    background-image: -moz-linear-gradient(top, #f2a065, #f6bd94);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2a065), to(#f6bd94));
+    background-image: -webkit-linear-gradient(top, #f2a065, #f6bd94);
+    background-image: -o-linear-gradient(top, #f2a065, #f6bd94);
+    background-image: linear-gradient(to bottom, #f2a065, #f6bd94);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2a065', endColorstr='#fff6bd94', GradientType=0);
+    border-color: #f6bd94 #f6bd94 #f0914d;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #f6bd94;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-grey {
+    background-color: hsl(196, 5%, 77%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dcdedf", endColorstr="#c1c5c7");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#dcdedf), to(#c1c5c7));
+    background-image: -moz-linear-gradient(top, #dcdedf, #c1c5c7);
+    background-image: -ms-linear-gradient(top, #dcdedf, #c1c5c7);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dcdedf), color-stop(100%, #c1c5c7));
+    background-image: -webkit-linear-gradient(top, #dcdedf, #c1c5c7);
+    background-image: -o-linear-gradient(top, #dcdedf, #c1c5c7);
+    background-image: linear-gradient(#dcdedf, #c1c5c7);
+    border-color: #c1c5c7 #c1c5c7 hsl(196, 5%, 74.5%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.16);
+    -webkit-font-smoothing: antialiased;
+}
+.btn-yellow {
+    background-color: hsl(57, 54%, 80%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#e7e4b0");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#ffffff), to(#e7e4b0));
+    background-image: -moz-linear-gradient(top, #ffffff, #e7e4b0);
+    background-image: -ms-linear-gradient(top, #ffffff, #e7e4b0);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e7e4b0));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e7e4b0);
+    background-image: -o-linear-gradient(top, #ffffff, #e7e4b0);
+    background-image: linear-gradient(#ffffff, #e7e4b0);
+    border-color: #e7e4b0 #e7e4b0 hsl(57, 54%, 75%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+    -webkit-font-smoothing: antialiased;
+}
+.dashNotification{
+    height: 35px;
+    width: 50px;
+    padding: 0px;
+    text-align: center;
+}
+.dashNotification h5{
+    color: #535151;
+}
+.labelNotify {
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    line-height: 15px;
+}
+.rigsection .thumbnail {
+    border: 1px solid red #808080;
+}
+.alertsDiv{
+    position: absolute;
+    margin-left: 89%;
+}
+.clsTHead th{
+    background-color: #FFF !important;
+}
+.inp-editable{
+    cursor: text !important; background-color: rgb(255, 255, 255) !important;
+}
+.clsSPFM{
+    width: 130px;
+}
+.lblPhaseProg{
+    color: #478A47;
+}
+.wea-clear-day{
+    float: right;
+    background-image:url("/img/weather/clear_day.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-clear-night{
+    float: right;
+    background-image:url("/img/weather/clear_night.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-rain{
+    float: right;
+    background-image:url("/img/weather/rain.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-snow{
+    float: right;
+    background-image:url("/img/weather/snow.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-sleet{
+    float: right;
+    background-image:url("/img/weather/sleet.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-partly-cloudy-day{
+    float: right;
+    background-image:url("/img/weather/partly_cloudy_day.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-partly-cloudy-night{
+    float: right;
+    background-image:url("/img/weather/partly_cloudy_night.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-partly-cloudy{
+    float: right;
+    background-image:url("/img/weather/partly_cloudy_night.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-cloudy{
+    float: right;
+    background-image:url("/img/weather/cloudy.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.wea-thunderstorm{
+    float: right;
+    background-image:url("/img/weather/thunderstorm.png");
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+.tblWeather{
+    margin: 0 auto;
+}
+.tblWeather .tdOdd{
+    width:26%; text-align: right;
+    font-weight: bold;
+}
+.tblWeather .tdEven{
+    text-align: left;
+}
+.clsJointData b{
+    font-size: 20px;
+}
+.clsDrillTimeline{
+    height: 129px;
+}
+.tblBottom{
+    width: 100%;
+    padding: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+}
